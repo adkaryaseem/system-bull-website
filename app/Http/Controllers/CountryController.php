@@ -33,16 +33,16 @@ class CountryController extends Controller
             "country"=>"required"
         ]);
 
-        // Country::create([
-        //     "name"=>$request->country,
-        // ]);
+        Country::create([
+            "name"=>$request->country,
+        ]);
 
-        $country = new Country(); // model instance creation
-        $country->name = $request->name; // assigning vakue to object
-        // if($request->checked == true){
-        //     $country->alias = $request->alias;
-        // }
-        $country->save();
+        // $country = new Country(); // model instance creation
+        // $country->name = $request->name; // assigning vakue to object
+        // // if($request->checked == true){
+        // //     $country->alias = $request->alias;
+        // // }
+        // $country->save();
 
         session()->flash('message','Country Added');
         return back();
