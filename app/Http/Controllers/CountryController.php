@@ -75,13 +75,13 @@ class CountryController extends Controller
             "status"=>"required"
         ]);
         $country = Country::where('id','=',$id)->first();
-        // $country->update([
-        //     "name"=>$request->country,
-        //     "status"=>$request->status
-        // ]);
-        $country->name = $request->country;
-        $country->status = $request->status;
-        $country->save();
+        $country->update([
+            "name"=>$request->country,
+            "status"=>$request->status
+        ]);
+        // $country->name = $request->country;
+        // $country->status = $request->status;
+        // $country->save();
 
         return redirect()->route('admin.countries.index');
     }

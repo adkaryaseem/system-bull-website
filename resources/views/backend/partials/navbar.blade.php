@@ -18,6 +18,6 @@
         <a href="{{ route('admin.scrolling.index') }}">Scrolling Image</a>
     </li>
     <li>
-        <a href="">Chairman Message and Image</a>
+        <a href="{{ route('admin.chairmanmessage.index') }}">Chairman Message and Image</a>
     </li>
 </ul>

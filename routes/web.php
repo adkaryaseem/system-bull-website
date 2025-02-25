@@ -8,7 +8,9 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\IntroductionController;
 use App\Http\Controllers\PhotoGalleryController;
 use App\Http\Controllers\ScrollingImageController;
+use App\Http\Controllers\ChairmanMessageController;
 use App\Http\Controllers\StudentAdmissionController;
+use App\Http\Controllers\StudentTestiminialController;
 
 
 
@@ -91,5 +93,20 @@ Route::prefix('admin/')->name('admin.')->group(function () {
     Route::get('scrolling/edit/{id}', [ScrollingImageController::class, "edit"])->name('scrolling.edit');
     Route::post('scrolling/update/{id}', [ScrollingImageController::class, "update"])->name('scrolling.update');
     Route::any('scrolling/delete/{id}', [ScrollingImageController::class, "delete"])->name('scrolling.delete');
+
+    Route::get('chairmanmessage/index', [ChairmanMessageController::class, "index"])->name('chairmanmessage.index');
+    Route::get('chairmanmessage/create', [ChairmanMessageController::class, "create"])->name('chairmanmessage.create');
+    Route::post('chairmanmessage/store', [ChairmanMessageController::class, "store"])->name('chairmanmessage.store');
+    Route::get('chairmanmessage/edit/{id}', [ChairmanMessageController::class, "edit"])->name('chairmanmessage.edit');
+    Route::post('chairmanmessage/update/{id}', [ChairmanMessageController::class, "update"])->name('chairmanmessage.update');
+    Route::any('chairmanmessage/delete/{id}', [ChairmanMessageController::class, "delete"])->name('chairmanmessage.delete');
+
+
+    Route::get('testimonials/index', [StudentTestiminialController::class, "index"])->name('testimonials.index');
+    Route::get('testimonials/create', [StudentTestiminialController::class, "create"])->name('testimonials.create');
+    Route::post('testimonials/store', [StudentTestiminialController::class, "store"])->name('testimonials.store');
+    Route::get('testimonials/edit/{id}', [StudentTestiminialController::class, "edit"])->name('testimonials.edit');
+    Route::post('testimonials/update/{id}', [StudentTestiminialController::class, "update"])->name('testimonials.update');
+    Route::any('testimonials/delete/{id}', [StudentTestiminialController::class, "delete"])->name('testimonials.delete');
 });
 

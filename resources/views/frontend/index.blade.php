@@ -79,28 +79,19 @@
               <!-- </abbr>  -->
             </h3>
           </div>
+          @foreach ($chairman as $cman)
+            
           <div class="cman-img">
             <div>
-              <img src="{{asset("frontend/image/IMG_20180924_163255.jpg")}}" class="intr-img" />
+              <img src="{{asset("storage/".$cman->image)}}" class="intr-img" />
             </div>
           </div>
         </div>
         <div class="cman-msg">
           <span class="msg">
-            We can call 21st century as an era of Information and communication
-            Technology. So one should keep updated with the endeavors related to
-            exploration of ideas and knowledge regarding contemporary science
-            and technology so as to mould individual with local and global job
-            market .In fact Career Development is a major goal of an aspirant
-            student and we are here to make it happen. As we all know that each
-            and every aspects of life are somehow linked with science and
-            technology and the role of information flow among them will play
-            significant role to make it viable and efficient as well. In this
-            pretext, we felt that there is a need of a separate faculty on
-            Technology focusing information related work and study. Therefore
-            System Bull ICT College is established for teaching and learning
-            Information & Communication Technology in Nepal.
+            {{ $cman->message }}
           </span>
+          @endforeach
           <div class="msg-btn">
             <button class="rdmr-btn">Read More</button>
           </div>

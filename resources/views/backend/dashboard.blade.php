@@ -20,10 +20,10 @@
             <a href="{{ route('admin.countries.index') }}">Country</a>
         </div>
         <div class="cntnr">
-            <a href="">Scrolling Image</a>
+            <a href="{{ route('admin.scrolling.index') }}">Scrolling Image</a>
         </div>
         <div class="cntnr">
-            <a href="">Chairman Message and Image</a>
+            <a href="{{ route('admin.chairmanmessage.index') }}">Chairman Message and Image</a>
         </div>
     </div>
 @endsection
