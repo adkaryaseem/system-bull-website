@@ -5,7 +5,7 @@
 @section('backend-main')
 
 @include("backend.partials.navbar")
-<form action="{{ route('admin.testimonials.update',[$testiminial->id]) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.testimonials.update',[$testimonial->id]) }}" method="POST" enctype="multipart/form-data">
     @csrf
     <table width="100%">
         <tr>

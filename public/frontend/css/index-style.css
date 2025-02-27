@@ -23,14 +23,15 @@ main{
 .s-photo{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     place-items: center;
+    margin: 5px;
 }
 
 .scrolling img{
-    /* height: 400px; */
+    height: 400px;
     width: 1200px;
-    padding: 50px;
+    /* padding: 50px; */
     /* margin: 0px 10px 0px 15px; */
 }
 
@@ -515,261 +516,14 @@ main h3{
 }
 
 .card-1 img{
-    height: 150px; 
-    width: 150px; 
+    height: 100px; 
+    width: 10px; 
+    justify-content: space-around;
     border-radius: 50%
 }
 /* Main-Section-end */
 
-/* Footer-Section-Start */
-
-.footer-sections{
-    width: 100vw;
-    /* height: 600px; */
-    display: flex;
-    flex-direction: column;
-    background-color: #1d2057;
-}
-
-.footer-section{
-    display: flex;
-    flex-direction: row;
-    padding: 20px 50px;
-}
-
-.footer-right{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 70px 20px 20px 20px;
-}
-
-.footer-logo img{
-    width: 80px;
-    height: 80px;
-    margin: 0px 10px 20px 30px;
-}
-
-.footer-text{
-    font-size: 17px;
-    color: white;
-    text-align: justify;
-    line-height: 200%;
-    font-weight: 700;
-}
-
-.quick-links{
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    margin: 70px 20px 20px 20px;
-    padding: 20px;
-}
-
-.quick-link{
-    font-size: 25px;
-    color: white;
-    font-weight: 200;
-    margin-bottom: 20px;
-}
-
-.middle-1{
-    margin: 10px 0px 10px 0px;
-}
-
-.middle-1 *{
-    font-size: 20px;
-    color: white;
-    margin-top: 8px;
-    text-decoration: none;
-}
-
-.about-us-footer a:hover{
-    color: green;
-}
-
-.courses-footer a:hover{
-    color: green;
-}
-
-.gallery-footer a:hover{
-    color: green;
-}
-
-.contact-footer a:hover{
-    color: green;
-}
-
-.quick-contacts{
-    display: flex;
-    flex-direction: column;
-    margin: 70px 20px 20px 20px;
-    padding: 10px;
-}
-
-.quick-contact{
-    font-size: 25px;
-    color: white;
-    font-weight: 200;
-    margin-bottom: 20px;
-}
-
-.middle-2{
-    font-size: 18px;
-    color: white;
-    padding: 5px;
-}
-
-.news-letter-section{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    margin: 70px 20px 20px 50px;
-}
-
-.news-letter{
-    font-size: 25px;
-    color: white;
-    font-weight: 200;
-    margin-bottom: 20px;
-}
-
-.email-box-text{
-    font-size: 18px;
-    color: white;
-    padding: 5px;
-    text-align: justify;
-}
-
-.email-box{
-    width: 300px;
-    height: 30px;
-    margin: 10px 0px 10px 0px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-}
-
-.footer-sections hr{
-    width: 80vw;
-}
-
-.end-line{
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.copy-right{
-    font-size: 17px;
-    color: white;
-    text-align: justify;
-    margin: 0px 50px 10px 200px;
-}
-
-.designer{
-    font-size: 17px;
-    color: white;
-    text-align: justify;
-    margin: 0px 10px 0px 200px;
-}
-
-.designer a{
-    text-decoration: none;
-    color: yellowgreen;
-}
-
-.designer abbr{
-    text-decoration: none;
-}
-
-/* footer-section-ended */
-
-
-@media (max-width: 600px) {
-
-    /* responsiv-for-header-section */
-
-    .nav-info{
-        width: 100%;
-        height: 14vw;
-        place-items: start;
-        flex-direction: row;
-        text-align: center;
-    }
-
-    .page-logo{
-        display: flex;
-        flex-direction: row;
-        float: left;
-        margin: 2px 2px 2px 10px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo-nav{
-        flex-basis: 10vw;
-    }
-
-    .pad-10{
-        padding: 5px;
-    }
-
-    .nav-media-sm{
-        display: block;
-    }
-    
-    .nav-media{
-        display: none;
-    }
-
-    .fa-regular{
-        display: block;
-    }
-
-    .fa-brands{
-        margin: 0.5px;
-        padding: 0.5px;
-        border-width: 0.5px;
-    }
-
-    .side-bar-phone-display{
-        border: 1px solid red;
-        padding: 5px;
-        margin-bottom: 5px;
-        float: right;
-        display: block;
-        color: red;
-        cursor: pointer;
-    }
-
-    .nav-contents{
-        display: none;
-        height: 100vw;
-        width: 200px;
-        z-index: 999;
-        position: relative;
-        flex-direction: column;
-        flex-basis: 100vw;
-        float: right;
-    }
-
-    .nav-content-inside{
-        transform: translateX(-40vw);
-    }
-
-    .drop-down-content{
-        max-width: 250px;
-        width: 200px;
-    }
-
-    .cross-btn{
-        display: block;
-        cursor: pointer;
-    }
-    
-    /* responsiv-for-header-section-end */
+@media (max-width: 800px) {
 
     /* responsive-for-main-section-start */
 

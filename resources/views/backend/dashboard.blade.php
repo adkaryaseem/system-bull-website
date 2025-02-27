@@ -19,11 +19,16 @@
         <div class="cntnr">
             <a href="{{ route('admin.countries.index') }}">Country</a>
         </div>
+    </div>
+    <div class="d-flex">
         <div class="cntnr">
             <a href="{{ route('admin.scrolling.index') }}">Scrolling Image</a>
         </div>
         <div class="cntnr">
             <a href="{{ route('admin.chairmanmessage.index') }}">Chairman Message and Image</a>
+        </div>
+        <div class="cntnr">
+            <a href="{{ route('admin.testimonials.index') }}">Student Testimonials</a>
         </div>
     </div>
 @endsection

@@ -292,7 +292,26 @@
         Student Testimonials
       </div><br/>
       <div class="owl-carousel">
+        @foreach ($testimonials as $testimonial)  
         <div class="card-1 d-flex">
+          <img
+            src="{{ asset('storage/'.$testimonial->image) }}"
+            alt="No Internert Connection yet"
+          />
+          <p
+            style="
+              width: 200px;
+              padding: 10px;
+              margin: 10px;
+              background: #cccc;
+              border-radius: 10px;
+            "
+          >
+            {{ $testimonial->message }}
+          </p>
+        </div>
+        @endforeach
+        {{-- <div class="card-1 d-flex">
           <img
             src="https://picsum.photos/200/200"
             alt="No Internert Connection yet"
@@ -411,27 +430,7 @@
             voluptatum! Molestiae vero deleniti deserunt architecto modi
             temporibus quo necessitatibus dolorum?
           </p>
-        </div>
-        <div class="card-1 d-flex">
-          <img
-            src="https://picsum.photos/200/200"
-            alt="No Internert Connection yet"
-          />
-          <p
-            style="
-              width: 200px;
-              padding: 10px;
-              margin: 10px;
-              background: #cccc;
-              border-radius: 10px;
-            "
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi error
-            unde, earum quibusdam totam odit nostrum perspiciatis? Incidunt, ex
-            voluptatum! Molestiae vero deleniti deserunt architecto modi
-            temporibus quo necessitatibus dolorum?
-          </p>
-        </div>
+        </div> --}}
       </div>
     </main>
 @endsection

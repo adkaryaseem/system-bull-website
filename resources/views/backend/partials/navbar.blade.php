@@ -20,4 +20,7 @@
     <li>
         <a href="{{ route('admin.chairmanmessage.index') }}">Chairman Message and Image</a>
     </li>
+    <li>
+        <a href="{{ route('admin.testimonials.index') }}">Student Testimonials</a>
+    </li>
 </ul>

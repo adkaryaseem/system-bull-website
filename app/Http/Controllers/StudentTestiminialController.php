@@ -12,8 +12,8 @@ class StudentTestiminialController extends Controller
      */
     public function index()
     {
-        $testimonial = StudentTestiminial::get();
-        return view ('backend.home_page.testimonials.index',compact('testimonial'));
+        $testimonials = StudentTestiminial::get();
+        return view ('backend.home_page.testimonials.index',compact('testimonials'));
     }
 
     /**
@@ -35,6 +35,10 @@ class StudentTestiminialController extends Controller
         ]);
 
         $image = $request->file("image")->store("images/gallery/testimonial","public");
+        // StudentTestiminial::create([
+        //     "image" => $image,
+        //     "message" => $request->message
+        // ]);
         $studenttestimonials = new StudentTestiminial();
         $studenttestimonials->image=$image;
         $studenttestimonials->message=$request->message;
@@ -53,24 +57,36 @@ class StudentTestiminialController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(StudentTestiminial $studentTestiminial)
+    public function edit($id)
     {
-        //
+        $testimonial = StudentTestiminial::where("id","=",$id)->first();
+        return view('backend.home_page.testimonials.edit',compact('testimonial'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, StudentTestiminial $studentTestiminial)
+    public function update(Request $request, $id)
     {
-        //
+        $testimonial = StudentTestiminial::where('id','=',$id)->first();
+        $image = $request->file("image")->store('images/gallery/testimonial','public');
+        $imagepath = storage_path('app/public/'.$testimonial->image);
+        if(file_exists($imagepath)){
+            unlink($imagepath);
+        }
+    $testimonial->update([
+            "image"=>$image,
+            "message"=>$request->message
+        ]);
+        return redirect()->route('admin.testimonials.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(StudentTestiminial $studentTestiminial)
+    public function delete($id)
     {
-        //
+        StudentTestiminial::where('id','=',$id)->delete();
+        return redirect()->route('admin.testimonials.index');
     }
 }
