@@ -60,16 +60,22 @@ main{
 
 .marquee{
     width: 80vw;
-    font-size: 20px;
 }
 
 .marquee ul{
     display: flex;
-    justify-content: space-evenly;
     list-style: none;
 }
-.marquee li{
+
+.marquee ul li a{
+    margin-left: 100px;
+    font-size: 20px;
     text-decoration: none;
+    color: red;
+}
+
+.marquee ul li a:hover{
+    color: blueviolet;
 }
 
 /* marquee end */

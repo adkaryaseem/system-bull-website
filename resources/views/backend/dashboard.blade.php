@@ -5,7 +5,7 @@
 @section('backend-main')
     <div class="d-flex">
         <div class="cntnr">
-            <a href="{{ route('admin.introduction.index') }}">Introduction</a>
+            <a href="{{ route('admin.introduction.index') }}">About Introduction</a>
         </div>
         <div class="cntnr">
             <a href="{{ route('admin.photo.gallery.index') }}">Photo gallary</a>
@@ -14,21 +14,29 @@
             <a href="">contact Us</a>
         </div>
         <div class="cntnr">
-            <a href="{{ route('admin.course.index') }}">Course</a>
+            <a href="{{ route('admin.course.index') }}">Form Course</a>
         </div>
         <div class="cntnr">
-            <a href="{{ route('admin.countries.index') }}">Country</a>
+            <a href="{{ route('admin.countries.index') }}">Form Country</a>
         </div>
+
+        
     </div>
     <div class="d-flex">
         <div class="cntnr">
-            <a href="{{ route('admin.scrolling.index') }}">Scrolling Image</a>
+            <a href="{{ route('admin.scrolling.index') }}">Home Scrolling Image</a>
         </div>
         <div class="cntnr">
-            <a href="{{ route('admin.chairmanmessage.index') }}">Chairman Message and Image</a>
+            <a href="{{ route('admin.chairmanmessage.index') }}">Home Chairman Message and Image</a>
         </div>
         <div class="cntnr">
-            <a href="{{ route('admin.testimonials.index') }}">Student Testimonials</a>
+            <a href="{{ route('admin.testimonials.index') }}">Home Student Testimonials</a>
         </div>
+        <div class="cntnr">
+             <a href="{{ route('admin.homeintroduction.index') }}">Home Introduction</a>
+        </div>
+        <div class="cntnr">
+            <a href="{{ route('admin.whybull.index') }}">Why Bull</a>
+       </div>
     </div>
 @endsection

@@ -7,7 +7,7 @@
 
 @include("backend.partials.navbar")
 
-<a href="{{ route('admin.testimonials.create') }}">Create</a>
+<a href="{{ route('admin.homeintroduction.create') }}">Create</a>
 <table border="1" width="100%">
     <tr>
         <th>
@@ -17,28 +17,28 @@
             Image
         </th>
         <th>
-          Student Message
+          Introduction Message
         </th>
         <th>
             Action
         </th>
     </tr>
-    @foreach ($testimonials as $index=> $testimonial)
+    @foreach ($introductions as $index=> $introduction)
         <tr>
             <td>
                 {{ ++$index }}
             </td>
             <td>
-                {!! "<img src=".asset('storage/'.$testimonial->image)." height='150' width='150'>" !!}
+                {!! "<img src=".asset('storage/'.$introduction->image)." height='150' width='150'>" !!}
             </td>
             <td>
-                {{ $testimonial->message }}
+                {{ $introduction->message }}
             </td>
             <td>
-                <a href="{{ route('admin.testimonials.edit',[$testimonial->id]) }}">
+                <a href="{{ route('admin.homeintroduction.edit',[$introduction->id]) }}">
                     <button type="submit">Edit</button>
                 </a>
-                <a href="{{ route('admin.testimonials.delete',[$testimonial->id]) }}">
+                <a href="{{ route('admin.homeintroduction.delete',[$introduction->id]) }}">
                     <button type="reset">Delete</button>
                 </a>
             </td>

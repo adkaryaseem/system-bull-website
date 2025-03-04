@@ -12,7 +12,6 @@
     <main>
       <hr/>
         <div class="owl-carousel">
-
           {{-- <div class="scrolling s-photo">
             <img src="{{ asset('frontend/image/china_MG_5565.jpg') }}"/>
           </div>
@@ -34,7 +33,6 @@
             <img src="{{ asset('storage/'.$photo->images) }}"/>
           </div>
           @endforeach
-
         </div>
         <hr/>
         <!-- Notice Start -->
@@ -47,22 +45,34 @@
                <marquee behavior="scrolling" direction="rights" onmouseover="this.stop();" onmouseout="this.start();" >
                 <ul>
                   <li>
-                    Dashin Vaccation Start Date (2081-06-31)
+                      <a href="{{ route('news-notice') }}">
+                          Dashin Vaccation Start Date (2081-06-31)
+                      </a>
+                    </li>
+                  <li>
+                      <a href="{{ route('news-notice') }}">
+                          Holiday for Janai Purnima
+                      </a>
+                    </li>
+                  <li>
+                    <a href="{{ route('news-notice') }}">
+                          Holiday for Teej Festival
+                    </a>
                   </li>
                   <li>
-                    Holiday For Janai Purnima
+                    <a href="{{ route('news-notice') }}">
+                          Holiday for Maghe Sankranti
+                    </a>
                   </li>
                   <li>
-                    Holiday For Teej Festival
+                    <a href="{{ route('news-notice') }}">
+                          Holiday for Shivaratri
+                    </a>
                   </li>
                   <li>
-                    Holiday For Maghe Sankranti
-                  </li>
-                  <li>
-                    Holiday For Shivaratri
-                  </li>
-                  <li>
-                    Holiday For Holi
+                    <a href="{{ route('news-notice') }}">
+                          Holiday for Holi
+                    </a>
                   </li>
                 </ul>
               </marquee>
@@ -118,34 +128,24 @@
         </div>
       </div>
       <!-- College Introduction -->
+      @foreach ($introductions as $introduction)  
       <div class="sys-intro">
         <div class="int">
           <div class="topic">
             <h1>Introduction</h1>
           </div>
           <span class="intro-text">
-            With the advent of modern information and communication technology
-            the demand of technical education is increasing day by day whereas
-            the traditional method of teaching and learning practiced in Nepal
-            became outdated. If the demand of ICT related human resources are
-            kept in center stage. Therefore a Group of Professional Computer
-            Engineers has decided to take a lead for running ICT course at
-            System Bull information and Communication Technology College. Our
-            vision is to produce low, mid and high-end ICT professionals with
-            international accreditation as to compete with national as well
-            international demand. The course (Professional Computer hardwar &
-            Network technician) which is affiliated by CTEV So that it would
-            promote self-employment and also addresses for minimization of
-            unemployment in the country.
+            {{ $introduction->message }}
             <div>
               <button class="over-view">College Overview</button>
             </div>
           </span>
         </div>
         <div class="clz-intro-img">
-          <img src="{{ asset('frontend/image/intro.jpg')}}" class="sys-intro-img" />
+          <img src="{{ asset('storage/'.$introduction->image)}}" class="sys-intro-img" />
         </div>
       </div>
+      @endforeach
       <!-- why system Bull? -->
       <div class="why-bull">
         <div>
@@ -164,19 +164,9 @@
             <h1>Why System Bull?</h1>
           </div>
           <div class="answer">
-            This college of information and Communication Technology has been
-            established by experienced IT professional Engineer working in the
-            related field for more than decade to provide quality education in
-            order to meet the growing global demand of low, middle and highly
-            skilled IT professionals. We are committed to produce dedicated,
-            competent, self-starter and well trained graduates to address job
-            market of the country as well as abroad. They will be provided
-            hands-on experience before placement so as to deliver world-class
-            skill and knowledge within no time. System Bull is established to
-            provide ICT education for all on the basis of CTEVT - Curriculum
-            standard. With our existing faculty and infrastructure as SYSTEM
-            BULL, we can produce skill and qualified graduates who can compete
-            at any IT related job market in the world.
+            @foreach ($why as $bull)
+            {{ $bull->message }}
+            @endforeach
             <div class="msg-btn">
               <button class="rdmr-btn">Read More</button>
             </div>
