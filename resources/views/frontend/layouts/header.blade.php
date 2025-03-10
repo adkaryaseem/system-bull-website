@@ -34,7 +34,7 @@
       <!-- Navigation Pannel -->
       <div class="nav-info">
         <div class="logo-nav">
-          <img src={{ asset("frontend/image/logo.png") }} alt="page logo" class="page-logo" />
+          <img src={{ asset("frontend/image/logo-png.png") }} alt="page logo" class="page-logo" />
         </div>
         <div class="nav-media">
           <div class="pad-10">

@@ -1,5 +1,6 @@
 <section class="menu">
     <ul type="none">
+        <img src={{ asset("frontend/image/logo-white-bg-circle.png") }} alt="page logo" class="page-logo" height="100" width="100"/>
         <li>
         <a href="{{ route('admin.introduction.index') }}">About Introduction</a>
         </li>
