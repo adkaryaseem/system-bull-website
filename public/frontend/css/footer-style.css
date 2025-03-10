@@ -1,4 +1,42 @@
 /* Footer-Section-Start */
+.back-to-top{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color:rgb(244, 150, 150);
+}
+
+.return-top{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
+    height:70px;
+    width:70px;
+
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99999;
+
+    border-radius: 50%;
+    /* background-color:rgb(230, 193, 193); */
+   
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0%{background-image: radial-gradient(rgb(244, 150, 150),rgb(249, 243, 243))}
+    50%{background-image: radial-gradient(rgb(244, 150, 150),rgb(255, 255, 255));}
+    100%{background-image: radial-gradient(rgb(244, 150, 150),rgb(247, 224, 224))}
+}
+
+/* button{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: rgb(238, 41, 41);
+} */
 
 .footer-sections{
     width: 100vw;

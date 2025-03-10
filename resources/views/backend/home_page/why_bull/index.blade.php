@@ -4,9 +4,9 @@
 <title>Index</title>
 @endpush
 @section('backend-main')
-
-@include("backend.partials.navbar")
-
+<section class="content">
+    <div class="container">
+        <h1>Content</h1>
 <a href="{{ route('admin.whybull.create') }}">Create</a>
 <table border="1" width="100%">
     <tr>

@@ -24,6 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="{{ asset('frontend/css/footer-style.css') }}">
 
     @stack("css")
 

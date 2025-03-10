@@ -94,3 +94,9 @@
         </div>
     </main>
     @endsection
+
+    @push("js")
+        <script>
+            // alert('hello');
+        </script>
+    @endpush

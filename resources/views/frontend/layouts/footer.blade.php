@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="{{ asset('frontend/css/footer-style.css') }}">
 <footer>
+  <div class="return-top">
+    <button id="back-to-top" class="back-to-top">
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+  </div>
     <div class="footer-sections">
       <div class="footer-section">
         <div class="footer-right">
@@ -55,12 +59,17 @@
             newsletter from a website.
           </div>
           <div>
-            <input
-              type="text"
-              placeholder="Enter your email"
-              class="email-box"
-              required
-            />
+            {{-- <div data-sitekey="6LeDGb4pAAAAAO9CdUen5frZdk4132NjKvm-jbWn" class="g-recaptcha"></div> --}}
+            <div data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" class="g-recaptcha"></div>
+            <div id="newsletter-message">
+              <input id="email-newsletter"
+                type="text"
+                placeholder="Enter your email"
+                class="email-box"
+                required
+              />
+              <button id="submit" type="submit">Submit</button>
+            </div>
           </div>
         </div>
       </div>
@@ -91,6 +100,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     $(document).ready(function () {
       $(".owl-carousel").owlCarousel({
@@ -100,5 +110,65 @@
       });
     });
   </script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#back-to-top").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+
+        document.querySelector("#submit").addEventListener("click",function(e){
+          e.preventDefault();
+          let url ="{{ route('newsletter.subscribe') }}";
+          let email = document.getElementById("email-newsletter").value;
+          let trimemail = email.trim();
+          let csrf = "{{ csrf_token() }}";
+
+          // object creation
+          let postdata = {
+            "email" : trimemail,
+          };
+
+          // http request
+          // promise creation
+          response = fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-TOKEN": csrf,
+            },
+            body: JSON.stringify(postdata),
+          })
+          //promise resolution
+          .then(function(response){
+            return response.json();
+          })
+          // our core logic goes here after resolution
+          .then(function(data){
+            console.log(data);
+
+            //html creation
+            let node = document.createElement("span"); //span element creation
+            node.setAttribute("style", "color:green; background:white; border-radius:10px; border:none; padding: 4px");
+            let textnode = document.createTextNode(data.message); // adding text content
+            node.appendChild(textnode);
+            document.getElementById("newsletter-message").appendChild(node); // adding mesage to dom by creatinh entirely new element
+
+            setTimeout(function(){
+              node.remove();
+            },5000);
+
+          })
+
+          // if resolutiin fails this runs automatically
+          .catch(function(error){
+            console.log('error:',error);
+          });
+          
+        });
+    });
+  </script>
+  @stack("js")
 </body>
 </html>

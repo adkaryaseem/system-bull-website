@@ -3,7 +3,7 @@
     <title>Dashboard</title>
 @endpush
 @section('backend-main')
-    <div class="d-flex">
+    {{-- <div class="d-flex">
         <div class="cntnr">
             <a href="{{ route('admin.introduction.index') }}">About Introduction</a>
         </div>
@@ -19,8 +19,6 @@
         <div class="cntnr">
             <a href="{{ route('admin.countries.index') }}">Form Country</a>
         </div>
-
-        
     </div>
     <div class="d-flex">
         <div class="cntnr">
@@ -38,5 +36,11 @@
         <div class="cntnr">
             <a href="{{ route('admin.whybull.index') }}">Why Bull</a>
        </div>
-    </div>
+    </div> --}}
+        <section class="content">
+            <div class="container">
+                <h1>Content</h1>
+
+            </div>
+        </section>
 @endsection

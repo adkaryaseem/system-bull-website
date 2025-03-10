@@ -6,6 +6,30 @@
 <!-- to push css to template layouts -->
 @push("css")
 <link rel="stylesheet" href="{{ asset('frontend/css/index-style.css') }}" />
+<style>
+  .parallax-background {
+      background-image: url(https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D);
+      background-repeat: no-repeat;
+      height: 500px;
+      background-position: center;
+      filter: brightness(70%);
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .parallax-text {
+      color:white;
+      z-index: 999;
+      position: relative;
+      transform: translate(50%, -130%);
+      text-align: center;
+      width: 50%;
+  }
+</style>
 @endpush
 <!-- to insert the main page to the template in layouts -->
 @section("main-content")
@@ -173,8 +197,24 @@
           </div>
         </div>
       </div>
+
+      <div class="background">
+        <div class="parallax-background" style="background-image: url('https://systembull.edu.np/storage/photos/1/009/DSC_8201 (Copy).JPG')"></div>
+        <div class="parallax-text">
+            <div class="logo">
+                <a class="" href="https://systembull.edu.np">
+                    <img height="200px" src="https://systembull.edu.np/storage/photos/1/009/SYSTEM BULL INFORMATION AND COMMUNICATION TECHNOLOGY COLLEGE LOGO_page-0001.jpg" alt="logo" data-animatetype="slide-up" data-delay="delay2">
+                </a>
+            </div>
+            <div >
+                <h2>System Bull ICT College</h2>
+                <h1>Affiliated to CTEVT</h1>
+            </div>
+        </div>
+        
+    </div>
       <!-- College background with logo and name -->
-      <div class="college-background">
+      {{-- <div class="college-background">
         <div>
           <img
             src="{{asset("frontend/image/logo-white-bg-circle.png")}}"
@@ -187,7 +227,8 @@
             <h2>Affiliated To CTEVT</h2>
           </div>
         </div>
-      </div>
+      </div> --}}
+
       <!-- Students Life -->
       <div class="student-life-sec">
         <div class="student-life">

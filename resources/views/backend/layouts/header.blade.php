@@ -8,4 +8,5 @@
     @stack('title')
 </head>
 <body>
-    
+    <main>
+    @include('backend.partials.sidebar')

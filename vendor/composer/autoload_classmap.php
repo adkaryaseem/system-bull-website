@@ -9,15 +9,31 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
+<<<<<<< HEAD
+=======
+    'App\\Http\\Controllers\\ChairmanMessageController' => $baseDir . '/app/Http/Controllers/ChairmanMessageController.php',
+>>>>>>> a8aaec8561dd24cea48dd781e713b4aba973837f
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\CountryController' => $baseDir . '/app/Http/Controllers/CountryController.php',
     'App\\Http\\Controllers\\CourseController' => $baseDir . '/app/Http/Controllers/CourseController.php',
     'App\\Http\\Controllers\\FrontController' => $baseDir . '/app/Http/Controllers/FrontController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\IntroductionController' => $baseDir . '/app/Http/Controllers/IntroductionController.php',
     'App\\Http\\Controllers\\PhotoGalleryController' => $baseDir . '/app/Http/Controllers/PhotoGalleryController.php',
     'App\\Http\\Controllers\\ScrollingImageController' => $baseDir . '/app/Http/Controllers/ScrollingImageController.php',
     'App\\Http\\Controllers\\StudentAdmissionController' => $baseDir . '/app/Http/Controllers/StudentAdmissionController.php',
+=======
+    'App\\Http\\Controllers\\HomeIntroductionController' => $baseDir . '/app/Http/Controllers/HomeIntroductionController.php',
+    'App\\Http\\Controllers\\IntroductionController' => $baseDir . '/app/Http/Controllers/IntroductionController.php',
+    'App\\Http\\Controllers\\NewsletterController' => $baseDir . '/app/Http/Controllers/NewsletterController.php',
+    'App\\Http\\Controllers\\PhotoGalleryController' => $baseDir . '/app/Http/Controllers/PhotoGalleryController.php',
+    'App\\Http\\Controllers\\ScrollingImageController' => $baseDir . '/app/Http/Controllers/ScrollingImageController.php',
+    'App\\Http\\Controllers\\StudentAdmissionController' => $baseDir . '/app/Http/Controllers/StudentAdmissionController.php',
+    'App\\Http\\Controllers\\StudentTestiminialController' => $baseDir . '/app/Http/Controllers/StudentTestiminialController.php',
+    'App\\Http\\Controllers\\WhyBullController' => $baseDir . '/app/Http/Controllers/WhyBullController.php',
+>>>>>>> a8aaec8561dd24cea48dd781e713b4aba973837f
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Middleware\\AuthMiddleware' => $baseDir . '/app/Http/Middleware/AuthMiddleware.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => $baseDir . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
@@ -30,10 +46,22 @@ return array(
     'App\\Models\\Country' => $baseDir . '/app/Models/Country.php',
     'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\Introduction' => $baseDir . '/app/Models/Introduction.php',
+<<<<<<< HEAD
     'App\\Models\\PhotoGallery' => $baseDir . '/app/Models/PhotoGallery.php',
     'App\\Models\\StudentAdmission' => $baseDir . '/app/Models/StudentAdmission.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\home_page\\Scrolling_Image' => $baseDir . '/app/Models/home_page/Scrolling_Image.php',
+=======
+    'App\\Models\\Newsletter' => $baseDir . '/app/Models/Newsletter.php',
+    'App\\Models\\PhotoGallery' => $baseDir . '/app/Models/PhotoGallery.php',
+    'App\\Models\\StudentAdmission' => $baseDir . '/app/Models/StudentAdmission.php',
+    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\home_page\\ChairmanMessage' => $baseDir . '/app/Models/home_page/ChairmanMessage.php',
+    'App\\Models\\home_page\\HomeIntroduction' => $baseDir . '/app/Models/home_page/HomeIntroduction.php',
+    'App\\Models\\home_page\\Scrolling_Image' => $baseDir . '/app/Models/home_page/Scrolling_Image.php',
+    'App\\Models\\home_page\\StudentTestiminial' => $baseDir . '/app/Models/home_page/StudentTestiminial.php',
+    'App\\Models\\home_page\\WhyBull' => $baseDir . '/app/Models/home_page/WhyBull.php',
+>>>>>>> a8aaec8561dd24cea48dd781e713b4aba973837f
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
